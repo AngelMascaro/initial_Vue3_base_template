@@ -1,10 +1,28 @@
 <template>
   <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+    <router-link to="/">{{$t('app.nav_link_home')}}</router-link> |
+    <router-link to="/about">{{$t('app.nav_link_about')}}</router-link>
   </nav>
+  <LanguageSwitcher class="LanguageSwitcher justify-content-start "/>
   <router-view/>
 </template>
+
+<script>
+// import axios from "axios";
+import LanguageSwitcher from "./components/LanguageSwitcher.vue"
+
+export default {
+  name: "App",
+  components: {
+    LanguageSwitcher
+  },
+    data(){
+        return{
+            user: {},
+        }
+    },
+}
+</script>
 
 <style lang="scss">
 #app {
@@ -26,5 +44,10 @@ nav {
       color: #42b983;
     }
   }
+}
+.LanguageSwitcher{
+  position: absolute;
+  right: 10px;
+  top: 10px;
 }
 </style>

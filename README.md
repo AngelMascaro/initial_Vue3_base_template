@@ -1,4 +1,14 @@
-# initial_base_template
+# initial_Vue3_base_template
+
+-This is a base template for Vue3 projects. It includes the following:
+
+- - Vue3
+- - Vue Router
+- - Vuex
+- - i18n
+- - Jest
+- - SASS
+- - Bootstrap 5
 
 ## Project setup
 ```
